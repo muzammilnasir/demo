@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Sing Up</h2>
+            <div class="form-control inp1">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control inp2">
+                <label for="fname">Father Name</label>
+                <input type="text" id="fname" placeholder="Enter Father Name" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control inp3">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Your Email" required>
+                <small>Error message</small>
+            </div>
+            <div class="form-control inp4">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Your password" required>
+                <small>Error message</small>    
+            </div>
+
+            <div class="form-control inp5" id="demo">
+            </div>
+            <span id="next" onclick="asad()"></span>
+
+            <button id="noNe" onclick="momi()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+
+        let value = [];
+ 
+        function momi(){
+            value.push(document.getElementById("username").value);
+            value.push(document.getElementById("fname").value);
+            value.push(document.getElementById("email").value);
+            value.push(document.getElementById("passwords"));
+            console.log(value);
+
+            document.getElementById("noNe").style.display = "none";
+
+            document.querySelector(".inp1").style.display = "none";
+            document.querySelector(".inp2").style.display = "none";
+            document.querySelector(".inp3").style.display = "none";
+            document.querySelector(".inp4").style.display = "none";
+
+            document.getElementById("email").value;
+            document.getElementById("password").value;
+
+            let laBle = document.createElement("lable");
+            let Node = document.createTextNode("Enter Confirm Email");
+            laBle.appendChild(Node);
+            document.getElementById("demo").appendChild(laBle).style.color ="#777";
+            document.getElementById("demo").appendChild(laBle).style.display ="block";
+            document.getElementById("demo").appendChild(laBle).style.marginBottom ="5px";
+
+            let node = document.createElement("input");
+            node.setAttribute("type", "email");
+            node.setAttribute("id", "confmemail");
+            let textNode = document.createTextNode("");
+            node.appendChild(textNode);
+            document.getElementById("demo").appendChild(node);
+
+                // second
+
+            let pass = document.createElement("lable");
+            let conPas = document.createTextNode("Enter Confirm Password");
+            pass.appendChild(conPas);
+            document.getElementById("demo").appendChild(pass).style.color ="#777";
+            document.getElementById("demo").appendChild(pass).style.display ="block";
+            document.getElementById("demo").appendChild(pass).style.marginBottom ="5px";
+
+            let passWord = document.createElement("input");
+            passWord.setAttribute("type", "password");
+            passWord.setAttribute("id", "confmpassword");
+            let conFirm = document.createTextNode("");
+            passWord.appendChild(conFirm);
+            document.getElementById("demo").appendChild(passWord);
+
+            //button
+
+            let dsiPly = document.createElement("button");
+            let buton = document.createTextNode("Login");
+            dsiPly.appendChild(buton);
+            document.getElementById("next").appendChild(dsiPly); 
+
+        }
+
+        function asad(){
+            // let a = document.getElementById("email").value;
+            // let b = document.getElementById("password").value;
+            // let c = document.getElementById("confmemail").value;
+            // let d = document.getElementById("confmpassword").value;
+
+            if(email == confmemail && password == confmpassword){
+                console.log("Welcome")
+            }
+            else{
+                console.log("incorrect email password")
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let userName = prompt("Enter Your Name");
+        // let userEmail = prompt("Enter Your Email");
+        // let userPass = prompt("Enter Your Password");
+        // let confirmPass = prompt("Enter Your Comfirm Password");
+
+        // function momi(){
+        //     let firstname = document.getElementById("username").value;
+        //     let Email = document.getElementById("email").value;
+        //     let Password = document.getElementById("password").value;
+        //     let confPass = document.getElementById("password2").value;
+
+        //     if (usreName == firstname && userEmail == Email){
+        //         console.log(`Wellcome`)
+        //     }
+        //     else if(userPass == Password && confPass == Password){
+        //         console.log(`Wellcome`)
+        //     }
+        //     else{
+        //         window.alert("Plase Try Agin")
+        //     }
+
+        // }
+
+
+
+
+
+
+
+
+
+        // function clk() {
+
+        //     let first = document.getElementById("username").value;
+        //     let userEmail = document.getElementById("email").value;
+        //     let userPass = document.getElementById("password").value;
+        //     let confirmPass = document.getElementById("password2").value;
+
+        //     if (userEmail == "muzammilnasir1304@gmail.com" && userPass == "muzammilnasir" && userPass == confirmPass) {
+        //         console.log("Wellcome To Muzammil")
+
+        //     }
+        //     else if (userEmail == "talhanasir1304@gmail.com" && userPass == "talhanasir" && userPass == confirmPass) {
+        //      console.log("Wellcome To Talha")
+        //     }
+        //     else if (userEmail == "yasirnasir1304@gmail.com" && userPass == "yasirnasir" && userPass == confirmPass) {
+        //      console.log("Wellcome To Yasir")
+        //     }
+        //     else {
+        //         window.alert("try agin")
+        //     }
+        // }
+    </script>
+
+
+
+</body>
+
+</html>
